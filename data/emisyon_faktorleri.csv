@@ -1,0 +1,43 @@
+# =============================================================================
+# TR-ZERO: IPCC 2006 Emisyon Faktörleri Veri Seti
+# =============================================================================
+#
+# Kaynak Referansları:
+# --------------------
+# [1] IPCC (2006). 2006 IPCC Guidelines for National Greenhouse Gas 
+#     Inventories, Volume 2: Energy, Table 2.2. 
+#     https://www.ipcc-nggip.iges.or.jp/public/2006gl/
+#
+# [2] EPA (2021).  Emission Factors for Greenhouse Gas Inventories. 
+#     https://www.epa.gov/sites/default/files/2021-04/documents/emission-factors_apr2021.pdf
+#
+# [3] Turkish NIR 2024, Annex 8: Country-Specific Emission Factors.
+#     https://unfccc.int/documents/627786
+#
+# [4] Quaschning, V. (2024). Specific Carbon Dioxide Emissions of Various Fuels.
+#     https://www.volker-quaschning.de/datserv/CO2-spez/index_e.php
+#
+# Birimler:
+# - CO2: kg CO2 / TJ (veya belirtildiği gibi)
+# - CH4: kg CH4 / TJ
+# - N2O: kg N2O / TJ
+#
+# GWP Değerleri (IPCC AR5, 100 yıllık):
+# - CO2: 1
+# - CH4: 28
+# - N2O: 265
+# =============================================================================
+Yakit_Tipi,Sektor,CO2_kg_TJ,CH4_kg_TJ,N2O_kg_TJ,Kaynak,Not
+Linyit,Enerji_Elektrik,101000,1,1.5,IPCC_2006_Tablo_2.2,Türkiye linyiti için varsayılan değer
+Taskomur,Enerji_Elektrik,94600,1,1.5,IPCC_2006_Tablo_2.2,İthal kömür için
+Dogalgaz,Enerji_Elektrik,56100,1,0.1,IPCC_2006_Tablo_2.2,Kombine çevrim santralleri
+Fuel_Oil,Enerji_Sanayi,77400,3,0.6,IPCC_2006_Tablo_2.2,Endüstriyel kazanlar
+Motorin,Enerji_Ulasim,74100,3.9,3.9,IPCC_2006_Tablo_2.3,Karayolu taşımacılığı
+Benzin,Enerji_Ulasim,69300,3.8,5.7,IPCC_2006_Tablo_2.3,Binek araçlar
+LPG,Enerji_Konut,63100,1,0.1,IPCC_2006_Tablo_2.2,Konut ısıtma
+Cimento_Klinker,IPPU,520,0,0,IPCC_2006_Tablo_2.6,kg CO2/ton klinker
+Celik_EAF,IPPU,50,0,0,NIR_2024_Annex8,kg CO2/ton çelik (Elektrik Ark Ocağı)
+Celik_BOF,IPPU,1850,0,0,NIR_2024_Annex8,kg CO2/ton çelik (Bazik Oksijen Fırını)
+Gubre_N,Tarim,0,0,16.5,IPCC_2006_Tablo_11.1,kg N2O-N/kg N uygulaması (direkt)
+Enterik_Fermantasyon,Tarim,0,65,0,IPCC_2006_Tablo_10.10,kg CH4/baş/yıl (sığır)
+Kati_Atik_Depolama,Atik,0,58,0,IPCC_2006_Tablo_3.1,kg CH4/ton atık (varsayılan)
